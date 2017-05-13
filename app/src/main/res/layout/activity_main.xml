@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:paddingBottom="16dp"
+    android:paddingEnd="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:background="@color/colorBlue"
+    tools:context="com.mytechwall.android.tipcalculator.MainActivity">
+
+    <TextView
+        android:id="@+id/billAmountTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main.msg.billamount"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="@color/colorWhite"
+       />
+
+    <EditText
+        android:id="@+id/editTextBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/billAmountTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/main.hint.billamount"
+        android:textColor="@color/colorWhite"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColorHint="@color/colorGrey"
+        android:gravity="center"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:id="@+id/viewSeperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/editTextBillAmount"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorGrey"/>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/viewSeperator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/normalService"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBlue"
+            android:src="@drawable/emoticon_neutral" />
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/goodService"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBlue"
+            android:src="@drawable/emoticon_happy" />
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/excellentService"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBlue"
+            android:src="@drawable/emoticon_excited" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewSeperator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/buttonLayout"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorGrey"/>
+
+    <TextView
+        android:id="@+id/serviceRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewSeperator1"
+        android:layout_marginTop="20dp"
+        android:ems="15"
+        android:text="@string/main.msg.servicerating"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorWhite"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textAllCaps="true"/>
+
+    <LinearLayout
+        android:id="@+id/layoutRAting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/serviceRating"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:divider="@android:drawable/divider_horizontal_bright"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/textViewTipPercent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:text="@string/main.msg.tippercent"
+            android:textColor="@color/colorWhite"/>
+
+
+        <TextView
+            android:id="@+id/tipTotal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/msin.msg.tiptotal"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+    <View
+        android:id="@+id/viewSeperator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layoutRAting"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorGrey"/>
+
+    <TextView
+        android:id="@+id/textViewBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewSeperator2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="@string/msin.msg.billtotal"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/textViewBillTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBill"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="@string/msin.msg.billtotalresult"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+
+        android:textColor="@color/colorWhite"/>
+
+
+</RelativeLayout>
